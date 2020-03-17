@@ -1,0 +1,19 @@
+server:
+  port: 9091
+
+keycloak:
+  realm: springboot-integration
+  resource: springboot-rest-api
+  bearer-only: true
+  credentials:
+      secret: 6e32611b-8e10-4afe-ac0b-0f64c4022390
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  confidential-port: 0
+
+
+logging:
+    level:
+        org:
+            springframework:
+                security:  DEBUG

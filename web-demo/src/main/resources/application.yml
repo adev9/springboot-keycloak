@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+keycloak:
+  realm: springboot-integration
+  resource: springboot-security
+#  credentials:
+#    secret: 6e32611b-8e10-4afe-ac0b-0f64c4022390
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  confidential-port: 0
+  public-client: true
+  principal-attribute: preferred_username
+
+
+logging:
+  level:
+    org:
+      springframework:
+        security:  DEBUG
+
